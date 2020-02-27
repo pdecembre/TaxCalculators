@@ -1,0 +1,37 @@
+
+
+### LOAD
+GET https://localhost:5001/api/salestax/load
+
+###  Rates
+GET https://localhost:5001/api/salestax/rates/taxjar/33461
+
+### Rates leaf
+GET https://localhost:5001/api/salestax/rates/taxleaf/33461
+
+
+
+### Taxes TaxJar
+POST https://localhost:5001/api/salestax/taxes/taxjar
+Content-Type: application/json
+
+{
+    "Country": "US",
+    "State": "FL",
+    "Zip": "33461",
+    "Shipping": 3.78,
+    "Amount": 48.56 
+}
+
+
+### Taxes Leaf
+POST https://localhost:5001/api/salestax/taxes/taxleaf
+Content-Type: application/json
+
+{
+    "Country": "US",
+    "State": "FL",
+    "Zip": "33461",
+    "Shipping": 3.78,
+    "Amount": 48.56 
+}
